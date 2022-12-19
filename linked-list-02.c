@@ -54,23 +54,6 @@ struct node* merge(struct node *temp1,struct node *temp2){
     }
     return p;
 }
-struct node *reverse(struct node *temp){
-    struct node *p1;
-    struct node *p2;
-    struct node *p3;
-    p1=NULL;
-    p2=temp;
-    p3=p2->next;
-    while(p2!=NULL){
-        p2->next=p1;
-        p1=p2;
-        p2=p3;
-        p3=p3->next;
-        printf("%d ",p1->data);
-    }
-    return p1;
-
-}
 
 int main(){
     //list 01
@@ -114,6 +97,5 @@ int main(){
     //merge list
     struct node *head3=merge(head1,head2);
     print(head3); 
-    struct node*r= reverse(head1);
-    print(r);
+    
 }
